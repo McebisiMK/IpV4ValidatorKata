@@ -19,7 +19,7 @@ namespace IpAddressValidatorKata
 
         private bool ValidateIpAddress(string ipAddress)
         {
-            var containsString = ipAddress.Split('.').Any(ip => int.TryParse(ip, out int invalid) == false);
+            var containsString = ipAddress.Split('.').Any(ip => int.TryParse(ip, out int invalid).Equals(false));
             if (containsString)
             {
                 return false;
